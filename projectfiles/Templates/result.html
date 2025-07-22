@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Traffic Volume Estimation</title>
+    <style>
+        body {
+            background-image: url("{{ url_for('static', filename='car_background.png') }}");
+            background-size: cover;
+            background-position: center bottom;
+            background-repeat: no-repeat;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            color: white;
+        }
+
+        .container {
+            position: absolute;
+            top: 1%;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+        }
+
+        h4 {
+            font-size: 100px;
+            font-weight: 900;
+            margin-bottom: 40px; /* Increased space between heading and prediction */
+        }
+
+        .result-text {
+            font-size: 26px;
+            font-weight: bold;
+            padding: 15px 40px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h4>Traffic volume estimation</h4>
+        <div class="result-text">
+             {{ prediction }}
+        </div>
+    </div>
+</body>
+</html>
